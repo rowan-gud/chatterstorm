@@ -641,6 +641,7 @@ Subtype: tokens::Subtype = {
   "regatha" => tokens::Subtype::Regatha,
   "segovia" => tokens::Subtype::Segovia,
   "serra's realm" => tokens::Subtype::SerrasRealm,
+  "serra’s realm" => tokens::Subtype::SerrasRealm,
   "shadowmoor" => tokens::Subtype::Shadowmoor,
   "shandalar" => tokens::Subtype::Shandalar,
   "shenmeng" => tokens::Subtype::Shenmeng,
