@@ -1,55 +1,4 @@
 #[derive(Debug)]
-pub enum Supertype {
-    // Official
-    Basic,
-    Legendary,
-    Ongoing,
-    Snow,
-    World,
-
-    // Non-official
-    Elite,
-    Host,
-}
-
-#[derive(Debug)]
-pub enum ObjectType {
-    // Permanents
-    Artifact,
-    Battle,
-    Creature,
-    Dungeon,
-    Enchantment,
-    Kindred,
-    Land,
-    Planeswalker,
-
-    // Non-permanents
-    Instant,
-    Sorcery,
-    Emblem,
-    Hero,
-    Stickers,
-
-    // Casual
-    Bounty,
-    Conspiracy,
-    Phenomenon,
-    Plane,
-    Scheme,
-    Vanguard,
-
-    // Deprecated
-    Tribal,
-
-    // Obselete
-    Enchant,
-    Interrupt,
-    ManaSource,
-    Summon,
-}
-
-#[derive(Debug)]
 pub enum Subtype {
     // Artifact
     Attraction,
@@ -277,8 +226,6 @@ pub enum Subtype {
     Phelddagrif,
     Phoenix,
     Phyrexian,
-    Pig,
-    Pilot,
     Pincher,
     Pirate,
     Plant,
