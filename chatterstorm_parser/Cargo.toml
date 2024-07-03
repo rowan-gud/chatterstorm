@@ -8,9 +8,10 @@ build = "build.rs"
 lalrpop = "0.20.2"
 
 [dependencies]
+chatterstorm_engine = { path = "../chatterstorm_engine" }
 derive_more = "0.99.18"
 lalrpop-util = { version = "0.20.2", features = ["lexer", "unicode"] }
-scryfall = "0.16.2"
+scryfall = { workspace = true }
 serde = { version = "1.0.203", features = ["derive"] }
 serde_json = "1.0.120"
 tokio = { version = "1.38.0", features = ["full"] }
