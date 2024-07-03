@@ -3,6 +3,8 @@ use std::sync::OnceLock;
 
 lalrpop_mod!(card);
 
+pub use card::*;
+
 pub static PARSER: OnceLock<Parser> = OnceLock::new();
 
 pub struct Parser {

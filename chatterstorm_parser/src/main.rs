@@ -19,7 +19,7 @@ async fn main() {
             continue;
         }
 
-        let parsed_card = Card::parse(&card);
+        let parsed_card = Card::parse(&card).unwrap();
 
         if count % 1000 == 0 {
             println!("{:?}", parsed_card);

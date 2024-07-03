@@ -1,4 +1,4 @@
-#[derive(Debug)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
 pub enum Subtype {
     // Artifact
     Attraction,
@@ -226,6 +226,7 @@ pub enum Subtype {
     Phelddagrif,
     Phoenix,
     Phyrexian,
+    Pilot,
     Pincher,
     Pirate,
     Plant,
