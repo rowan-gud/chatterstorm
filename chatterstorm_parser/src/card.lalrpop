@@ -1,5 +1,4 @@
-use crate::ast;
-use crate::tokens;
+use chatterstorm_engine::{objects, tokens};
 
 grammar;
 
@@ -17,15 +16,15 @@ SpaceSepList<T>: Vec<T> = {
 
 // - Types
 
-pub TypeLine: (ast::ObjectFaceType, Option<ast::ObjectFaceType>) = {
+pub TypeLine: (objects::CardType, Option<objects::CardType>) = {
   <f:FaceType> <b:("//" <FaceType>)?> => {
       (f, b)
   }
 }
 
-FaceType: ast::ObjectFaceType = {
+FaceType: objects::CardType = {
   <token:TokenKeyword?> <supertypes:SupertypeList?> <object_types:ObjectTypeList> <subtypes:(HyphenLike <SubtypeList>)?> => {
-    ast::ObjectFaceType::new(
+    objects::CardType::new(
       supertypes.unwrap_or(vec![]),
       object_types,
       subtypes.unwrap_or(vec![]),
@@ -33,16 +32,16 @@ FaceType: ast::ObjectFaceType = {
     )
   },
   TokenKeyword => {
-    ast::ObjectFaceType::new(vec![], vec![], vec![], true)
+    objects::CardType::new(vec![], vec![], vec![], true)
   },
   "card" => {
     Default::default()
   },
   "summon" <Subtype> => {
-    ast::ObjectFaceType::new(vec![], vec![tokens::ObjectType::Creature], vec![<>], false)
+    objects::CardType::new(vec![], vec![tokens::ObjectType::Creature], vec![<>], false)
   },
   "summon legend" => {
-    ast::ObjectFaceType::new(
+    objects::CardType::new(
       vec![tokens::Supertype::Legendary],
       vec![tokens::ObjectType::Creature],
       vec![],

@@ -1,4 +1,4 @@
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
+#[derive(Debug, Clone, PartialEq, Eq, Hash)]
 pub enum Subtype {
     // Artifact
     Attraction,
@@ -556,3 +556,17 @@ pub enum Subtype {
     // Dungeon
     Undercity,
 }
+
+impl TryFrom<usize> for Subtype {
+    type Error = ();
+
+    fn try_from(value: usize) -> Result<Self, Self::Error> {
+        if value > Subtype::Undercity as usize {
+            Err(())
+        } else {
+            Ok(unsafe { std::mem::transmute::<u16, Subtype>(value as u16) })
+        }
+    }
+}
+
+enum_set!(Subtypes, Subtype);
