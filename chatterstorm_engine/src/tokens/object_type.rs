@@ -1,4 +1,5 @@
 #[repr(u8)]
+#[non_exhaustive]
 #[derive(Debug, Clone, PartialEq, Eq, Hash)]
 pub enum ObjectType {
     // Permanents
