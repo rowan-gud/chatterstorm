@@ -1,7 +1,12 @@
 [workspace]
 
 resolver = "2"
-members = ["chatterstorm_engine", "chatterstorm_parser"]
+members = [
+  "chatterstorm_client",
+  "chatterstorm_core",
+  "chatterstorm_game_server",
+  "chatterstorm_parser",
+]
 
 [workspace.dependencies]
 scryfall = "0.16.2"

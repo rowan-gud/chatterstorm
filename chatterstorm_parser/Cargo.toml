@@ -8,7 +8,7 @@ build = "build.rs"
 lalrpop = "0.20.2"
 
 [dependencies]
-chatterstorm_engine = { path = "../chatterstorm_engine" }
+chatterstorm_core = { path = "../chatterstorm_core" }
 derive_more = "0.99.18"
 lalrpop-util = { version = "0.20.2", features = ["lexer", "unicode"] }
 scryfall = { workspace = true }

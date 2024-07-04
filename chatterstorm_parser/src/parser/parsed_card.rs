@@ -1,4 +1,4 @@
-use chatterstorm_engine::objects;
+use chatterstorm_core::objects;
 use derive_more::Display;
 
 use super::card_parser::{TypeLineParser, PARSER};

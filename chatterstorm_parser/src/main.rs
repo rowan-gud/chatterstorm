@@ -1,4 +1,4 @@
-use chatterstorm_engine::objects::Card;
+use chatterstorm_core::objects::Card;
 use chatterstorm_parser::{Parseable, Parser};
 use scryfall::set::SetType;
 

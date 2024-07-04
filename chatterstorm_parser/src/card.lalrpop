@@ -1,4 +1,4 @@
-use chatterstorm_engine::{objects, tokens};
+use chatterstorm_core::{objects, tokens};
 
 grammar;
 
