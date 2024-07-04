@@ -1,3 +1,5 @@
+#[repr(u8)]
+#[non_exhaustive]
 #[derive(Debug, Clone, PartialEq, Eq, Hash)]
 pub enum Supertype {
     // Official
