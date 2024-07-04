@@ -1,3 +1,4 @@
+#[repr(u16)]
 #[derive(Debug, Clone, PartialEq, Eq, Hash)]
 pub enum Subtype {
     // Artifact
